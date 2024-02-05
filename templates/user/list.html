@@ -1,0 +1,14 @@
+{% extends 'user/base.html' %}
+{% block title %}Create{% endblock %}
+{% block content %}
+  <h1 style="margin-left: 20px;">List</h1>
+  <div style="margin-left: 20px;">
+    {% if users %}
+      {% for user in users %}
+        <div style="display: flex;">
+          <p>{{user.id}}.</p>
+          <p style="margin-left: 5px;">{{user.username}}</p>
+        </div>
+      {% endfor %}
+    {% endif %}
+{% endblock %}

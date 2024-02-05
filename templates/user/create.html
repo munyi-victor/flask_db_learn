@@ -1,0 +1,14 @@
+{% extends 'user/base.html' %}
+{% block title %}Create{% endblock %}
+{% block content %}
+  <h1>Create</h1>
+  <div style="margin-left: 20px;">
+    <form action="{{url_for('user_create')}}" method="post">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username"/>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email"/>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+{% endblock %}
